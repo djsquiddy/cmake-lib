@@ -1,0 +1,8 @@
+find_package(assimp REQUIRED)
+include_directories(${assimp_INCLUDE_DIRS})
+link_directories(${assimp_LIBRARIES})
+if(NOT assimp_FOUND) 
+    message(ERROR " Assimp not found!") 
+else(NOT assimp_FOUND)
+    message("Assimp found!") 
+endif(NOT assimp_FOUND)
